@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        var nome = window.prompt("SEU NOME: ")
+        var idade = Number(window.prompt("IDADE?: "))
+
+        if (idade <16){
+            document.write(`${nome} Você tem ${idade} anos: Você não vota!`)
+        }
+        else if (idade <18 ||idade >=65 ){
+            document.write(`${nome} você tem ${idade} anos: Voto Opcional`)
+        }
+        else{
+            document.write(`${nome} você tem ${idade} anos: Voto obrigatório`)
+        }
+    </script>
+</body>
+</html>
