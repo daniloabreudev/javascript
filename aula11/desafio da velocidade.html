@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio da Velocidade</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+        body {
+            background-color: rgba(21, 171, 4, 0.605);
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            
+            /* Ajustes do Flexbox para prender o footer embaixo */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+        h1 {
+            color: white;
+            font-size: 2em;
+            padding-top: 20px; /* Um espacinho no topo */
+            padding-bottom: 10px;
+        }
+        i#emojicar {
+            color: black;
+            padding-right: 12px;
+        }
+        /* A div que vai esticar e empurrar o rodapé */
+        div#res {
+            flex: 1;
+            padding: 20px;
+        }
+        /* O rodapé comportado */
+        footer {
+            padding: 20px;
+            color: white;
+            font-weight: normal;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1><i class="fa-solid fa-car" id="emojicar"></i>Sistema de Multas</h1>
+    
+    <div>
+        Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+        <input type="button" value="Verificar" onclick="calcular()">
+    </div>
+
+    <div id="res">
+        </div>
+
+    <footer>Desenvolvido por @Daniloabreudev em 2026</footer>
+
+    <script>
+        function calcular() {
+            var txtv = window.document.getElementById('txtvel')
+            var res = window.document.getElementById('res')
+            var vel = Number(txtv.value)
+
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel} km/hr</strong>`
+            if (vel > 80){
+                res.innerHTML += `<p> Você está <strong>multado</strong> por excesso de velocidade!`
+            } else if(vel > 60){
+                res.innerHTML += `<p> Você está em uma velocidade muito alta! Cuidado para não ser multado`
+            } else {
+                res.innerHTML += `<p> Sua velocidade está dentro de uma margem segura!`
+            }
+            res.innerHTML += `<p> Dirija sempre com cinto de segurança!`
+        }
+    </script>
+</body>
+</html>
