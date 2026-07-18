@@ -15,15 +15,13 @@ section{
     margin: auto;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.23);
 }
-footer{
-    color: white;
-    text-align: center;
-    font-style: italic;
-}
+
 div{
     text-align: center;
     padding: 8px;
+    text-align: left;
 }
+
 section > div#foto > img{
     border-radius: 50% ;
     object-fit: cover;
@@ -31,6 +29,11 @@ section > div#foto > img{
     margin: 15px auto;
     width: 250px;
     height: 250px;
+}
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
 }
 footer > p > a{
     text-decoration: none;
