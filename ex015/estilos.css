@@ -17,18 +17,25 @@ section{
 }
 
 div{
-    text-align: center;
     padding: 8px;
     text-align: left;
 }
 
-section > div#foto > img{
+section > div#espaco-foto > img{
     border-radius: 50% ;
     object-fit: cover;
     display: block;
     margin: 15px auto;
     width: 250px;
     height: 250px;
+}
+section > div#espaco-foto > div#nome-resultado{
+    font-weight: bold;
+    text-align: center;
+}
+section > div#espaco-foto > div#nome-resultado:hover{
+    color: goldenrod;
+    transition: 0.5s;
 }
 footer{
     color: white;

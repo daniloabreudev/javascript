@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hora do dia</title>
+    <title>Verificador de idade</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body >
@@ -11,6 +11,10 @@
         <h1>Verificador de Idade</h1>
     </header>
     <section id="caixa-verificadora">
+        <div id="nome">
+            <label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome" required>
+        </div>
         <div id="Nascimento">
             <label for="iano">Ano de Nascimento:</label>
             <input type="number" name="iano" id="iano" min="1900" max="2026">
@@ -27,6 +31,12 @@
         <div id="mensagem">
             Preencha os dados acima para ver o resultado!
         </div>
+        <div id="espaco-foto">
+            <img src="" alt="" id="foto">
+            <div id="nome-resultado"></div>
+        </div>
+        
+        
     </section>
     <footer>
         <p><a href="https://github.com/daniloabreudev" target="_blank">@Daniloabreudev</a></p>
