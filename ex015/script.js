@@ -21,7 +21,7 @@ function verificar() {
         if (listaSexo[0].checked) {
             genero = 'Mulher'
             if (idade <12){
-                img.src = 'menina-criança.jpg'
+                img.src = 'menina-crianca.jpg'
                 img.alt = 'foto de uma menina'
             }else if (idade < 18){
                 img.src = 'menina-jovem.jpg'
@@ -57,4 +57,24 @@ function verificar() {
      
         msg.innerHTML = `Detectamos um(a) ${genero} com ${idade} anos.`
     }
+}
+
+function limpar() {
+    // 1. Esvazia os campos de texto e número
+    document.getElementById('inome').value = ''
+    document.getElementById('iano').value = ''
+    
+    // 2. Desmarca as opções de sexo
+    var listaSexo = document.getElementsByName('sexo')
+    listaSexo[0].checked = false
+    listaSexo[1].checked = false
+    
+    // 3. Reseta os textos de resultado para a mensagem inicial
+    document.getElementById('mensagem').innerHTML = 'Preencha os dados acima para ver o resultado!'
+    document.getElementById('nome-resultado').innerHTML = ''
+    
+    // 4. Remove a foto e o alt
+    var img = document.getElementById('foto')
+    img.src = ''
+    img.alt = ''
 }
