@@ -1,0 +1,28 @@
+body{
+    background-color: rgba(0, 0, 255, 0.619);
+    font: normal 15pt Arial;
+}
+header{
+    color: white;
+    text-align: center;
+}
+section{
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: auto;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.23);
+    max-width: 500px;
+    width: 90%;
+}
+div.numeros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+footer{
+    color: white;
+    text-align: center;
+    font-style: italic;
+}

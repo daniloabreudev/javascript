@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do horario</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>Vamos Contar</h1>
+    </header>
+    <section>
+        <div class="numeros">
+            <label for="inicio">Início:</label>
+            <input type="number" name="inicio" id="inicio">
+        </div>
+        <div class="numeros">
+            <label for="fim">Fim:</label>
+            <input type="number" name="fim" id="fim">
+        </div>
+        <div class="numeros">
+            <label for="passo">Passo:</label>
+            <input type="number" name="passo" id="passo">
+        </div>
+        <div>
+            <button onclick="contar()">Contar</button>
+        </div>
+        <div id="res">
+            Preparando a contagem...
+        </div>
+    </section>
+    <footer>
+        <p><a href="https://github.com/daniloabreudev" target="">@Daniloabreudev</a></p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
