@@ -3,19 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio do horario</title>
+    <title>Exercício da tabuada</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <header>
-        <h1>Hora do Dia</h1>
+        <h1>Tabuada</h1>
     </header>
     <section>
         <div>
-            
+           <p>Número: <input type="number" name="numero" id="txtnum"></p> 
+           <p><input type="button" value="Gerar Tabuada" onclick="gerarTabuada()"></p>
         </div>
-        <div>
-
+        <div id="res">
+            <select name="tabuada" id="seltab" size="10">
+                <option >Digite um número acima</option>
+            </select>
         </div>
     </section>
     <footer>
