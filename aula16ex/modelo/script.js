@@ -4,6 +4,7 @@ let flista = document.getElementById('flista')
 let res = document.getElementById('res')
     
 function adicionar(){
+    res.innerHTML = ''
     let valorNum = Number(num.value)
 
     if (valorNum >=1 && valorNum<=100 && !numeros.includes(valorNum)){
@@ -21,7 +22,7 @@ function adicionar(){
 }
 function finalizar() {
     if(numeros.length == 0){
-        window.document('Adicione valores antes de finalizar!')
+        window.alert('Adicione valores antes de finalizar!')
     }else{
         let total = numeros.length
 
@@ -39,6 +40,25 @@ function finalizar() {
         res.innerHTML += `<p> O maior valor informado é ${maior} </p>`
         res.innerHTML += `<p> O menor valor informado é ${menor} </p>`
         res.innerHTML += `<p> Somando todos os valores, temos ${soma} </p>`
-        res.innerHTML += `<p> A média dos valores informados é ${media} </p>`
+        res.innerHTML += `<p> A média dos valores informados é ${media.toFixed(2)} </p>`
+    
     }
 }
+function limpar() {
+    // 1. Esvazia o array de dados na memória
+    numeros = []
+
+    // 2. Limpa o conteúdo da lista <select> e da div de resultados
+    flista.innerHTML = ''
+    res.innerHTML = ''
+
+    // 3. Limpa o input e coloca o foco nele
+    num.value = ''
+    num.focus()
+}
+// Captura a tecla Enter no campo input
+num.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        adicionar()
+    }
+})

@@ -3,23 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exercício da tabuada</title>
+    <title>Analisador de Números</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
     <header>
-        <h1>Tabuada</h1>
+        <h1>Analisador de Números</h1>
     </header>
     <section>
         <div>
-           <p>Número: <input type="number" name="numero" id="txtnum"></p> 
-           <p><input type="button" value="Gerar Tabuada" onclick="gerarTabuada()"></p>
+            <p class="campo-input">
+                Número (entre 1 e 100):
+                <input type="number" name="fnum" id="fnum">
+                <button id="Adicionar" onclick="adicionar()">Adicionar</button>
+            </p> 
         </div>
-        <div id="res">
-            <select name="tabuada" id="seltab" size="10">
-                <option >Digite um número acima</option>
-            </select>
+        <div>
+            <select name="flista" id="flista" size="6"></select>
+            <p>
+                <button onclick="finalizar()">Finalizar</button>
+                <button onclick="limpar()" class="btn-limpar">Limpar</button>
+            </p>
         </div>
+        <div id="res"></div>
     </section>
     <footer>
         <p>@Daniloabreudev</p>
