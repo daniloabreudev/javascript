@@ -147,9 +147,15 @@ footer {
     font-size: 0.85rem;
     margin-top: 15px;
     transition: color 0.3s ease;
+    
+}
+footer > p > a{
+    text-decoration: none;
+    color: inherit;
 }
 
 footer:hover {
     color: #f6ad55;
     cursor: pointer;
+    
 }
